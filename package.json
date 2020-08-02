@@ -1,0 +1,56 @@
+{
+  "name": "typescript-nodejs-boilerplate",
+  "version": "0.0.1",
+  "description": "Nodejs boilerplate with TS, eslint, prettier, and basic usage utilities to quickly start a project",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write src/**/*.ts",
+    "style:check": "prettier --check src/**/*.ts",
+    "lint": "eslint ./src --fix --ext .ts --max-warnings 0",
+    "lint:check": "eslint ./src/ --ext .ts --max-warnings 0"
+  },
+  "keywords": [
+    "boilerplate",
+    "typescript",
+    "nodejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gndelia/typescript-nodejs-boilerplate"
+  },
+  "homepage": "https://github.com/gndelia/typescript-nodejs-boilerplate",
+  "bugs": {
+    "url": "https://github.com/gndelia/typescript-nodejs-boilerplate/issues"
+  },
+  "author": {
+    "name": "Gonzalo D'Elia",
+    "email": "gonzalo.n.delia@gmail.com"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run format",
+      "npm run lint"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
+  }
+}
